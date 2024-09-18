@@ -1,0 +1,33 @@
+/* Ajustar el tamaño del ion-card para que coincida con el tamaño de la imagen */
+ion-card {
+  width: 100%; /* Ancho del card ajustado al contenedor */
+  max-width: 500px; /* Máximo ancho de 500 píxeles */
+  height: auto; /* Altura automática para mantener la relación de aspecto */
+  border-radius: 10px; /* Radio de borde para esquinas redondeadas */
+  border: 2px solid black; /* Borde negro de 2 píxeles de grosor */
+  overflow: hidden; /* Asegura que el contenido no se desborde del card */
+  display: flex; /* Para centrar el contenido dentro del card */
+  flex-direction: column; /* Alinea el contenido en una columna */
+  align-items: center; /* Centra el contenido horizontalmente */
+  justify-content: center; /* Centra el contenido verticalmente */
+  margin: 0 auto; /* Centra el card horizontalmente */
+}
+
+/* Ajustar el tamaño de la imagen dentro del ion-card */
+ion-card img {
+  width: 100%; /* Asegura que la imagen ocupe todo el ancho del card */
+  height: auto; /* Altura automática para mantener la relación de aspecto */
+  object-fit: cover; /* Ajusta la imagen para cubrir el card sin distorsionarse */
+}
+
+/* Media query para pantallas más pequeñas */
+@media (max-width: 600px) {
+  ion-card {
+    max-width: 90%; /* Ajusta el máximo ancho del card en pantallas pequeñas */
+    height: auto; /* Ajusta la altura automáticamente */
+  }
+
+  ion-card img {
+    height: auto; /* Ajusta la altura de la imagen automáticamente */
+  }
+}
